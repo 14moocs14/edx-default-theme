@@ -171,13 +171,15 @@
           <span class="register disabled">
             ${_("Course is full")}
           </span>
-        %elif true:
-              <p>Prova</p>
         %else:
+            % if true:
+              <p>prova</p>
+            % else:
           <a href="#" class="register">
             ${_("Register for {course.display_number_with_default}").format(course=course) | h}
           </a>
           <div id="register_error"></div>
+              %endif
         %endif
         </div>
 
