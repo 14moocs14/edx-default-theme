@@ -173,7 +173,9 @@
           </span>
         %else:
             % if 'E' in course.display_number_with_default:
+              <div id=inventat>
             <span class="register disabled">This course is outside UCATx</span>
+                  </div>
             % else:
           <a href="#" class="register">
             ${_("Register for {course.display_number_with_default}").format(course=course) | h}
