@@ -172,7 +172,7 @@
             ${_("Course is full")}
           </span>
         %else:
-            % if user.is_authenticated():
+            % if 'E' in course.display_number_with_default:
               <p>prova</p>
             % else:
           <a href="#" class="register">
