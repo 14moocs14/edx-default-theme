@@ -36,6 +36,63 @@
 
 <%block name="js_extra">
 
+<style>
+.curs-extern {
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+    -webkit-transition-property: none;
+    -webkit-transition-timing-function: ease;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(233, 233, 233);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(106, 106, 106);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(106, 106, 106);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(106, 106, 106);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(106, 106, 106);
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(106, 106, 106);
+    display: block;
+    float: left;
+    font-family: 'Source Sans', 'Open Sans', Verdana, Geneva, sans-serif, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 45px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 19px;
+    margin-top: 1px;
+    padding-bottom: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition-delay: 0s;
+    transition-duration: 0s;
+    transition-property: none;
+    transition-timing-function: ease;
+    width: 475px;
+}
+</style>
+
   <script type="text/javascript">
   (function() {
     $(".register").click(function(event) {
@@ -173,9 +230,7 @@
           </span>
         %else:
             % if 'E' in course.display_number_with_default:
-              <div id=inventat>
-            <span class="register disabled">This course is outside UCATx</span>
-                  </div>
+            <span class="curs-extern disabled">This course is outside UCATx</span>
             % else:
           <a href="#" class="register">
             ${_("Register for {course.display_number_with_default}").format(course=course) | h}
