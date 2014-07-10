@@ -230,7 +230,7 @@
           </span>
         %else:
             % if 'E' in course.display_number_with_default:
-            <span class="curs-extern disabled">This course is outside UCATx</span>
+            <span class="curs-extern disabled">Course supported in another platform</span>
             % else:
           <a href="#" class="register">
             ${_("Register for {course.display_number_with_default}").format(course=course) | h}
